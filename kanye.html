@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="kanye.js"></script>
+
     <link rel="stylesheet" href="kanye.css" />
   </head>
   <body>
+    <h1>The greatest of all time</h1>
     <button id="kanye">
       Gimme Kanye Quote
     </button>
@@ -16,36 +17,9 @@
     <button id="dad">
       Gimme Dad Joke
     </button>
+    <p id="para1"></p>
 
-    <script>
-      document.getElementById("kanye").addEventListener("click", kanyeQuote);
-      document.getElementById("dad").addEventListener("click", dadJoke);
-    </script>
-
-    <script>
-      let i = 0;
-      let images = [];
-      let time = 3000;
-
-      // Image List
-      images[0] = "kanye.jpg";
-      images[1] = "kanye2.jpg";
-      images[2] = "kanye3.jpg";
-
-      //Change Image
-      function changeImg() {
-        document.slide.src = images[i];
-
-        if (i < images.length - 1) {
-          i++;
-        } else {
-          i = 0;
-        }
-        setTimeout("changeImg()", time);
-      }
-
-      window.onload = changeImg;
-    </script>
     <img name="slide" width="100%" />
+    <script type="text/javascript" src="./kanye.js"></script>
   </body>
 </html>
