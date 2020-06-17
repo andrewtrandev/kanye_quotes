@@ -21,13 +21,12 @@ function kanyeQuote() {
   axios.get("https://api.kanye.rest").then(function (response) {
     console.log(response.data);
     // alert(response.data.quote);
-    outputBox.innerHTML = "<h2> Kanye speaketh </h2>" + response.data.quote;
+    outputBox.innerHTML =
+      "<h2> Kanye speaketh </h2>" + `<p>${response.data.quote}</p>`;
     // window.alert(response.data.quote);
     // document.write(response.data.quote); // not useful, deletes button
   });
 }
-
-const outputBox = document.querySelector("#para1"); //coolcool, so we make a outputBox which is just a paragraph in our html and feed our jokes/quotes into here
 
 function dadJoke() {
   axios
@@ -35,10 +34,12 @@ function dadJoke() {
     .then((res) => {
       console.log(res.data);
       // alert(res.data.joke)
-      outputBox.innerHTML = "<h2>Dad Joke</h2>" + res.data.joke;
+      outputBox.innerHTML = "<h2>Dad Joke</h2>" + `<p>${res.data.joke}</p>`;
     })
     .catch((err) => console.error(err));
 }
+
+const outputBox = document.querySelector("#para1"); //coolcool, so we make a outputBox which is just a paragraph in our html and feed our jokes/quotes into here
 
 //    BELOW CODE IS USED FOR THE IMAGE SLIDE
 let i = 0;
